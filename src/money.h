@@ -5,9 +5,6 @@
 #define MONEY_H
 using namespace std;
 
-double convertCentsToDollars( int cents ){
-    return ( (float) cents / 100 );
-}
-
+double convertCentsToDollars( int cents );
 
 #endif
