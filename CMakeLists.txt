@@ -9,7 +9,6 @@ set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin )
 set(CMAKE_CXX_FLAGS "-g -Wall -std=c++11")
 set (CMAKE_EXE_LINKER_FLAGS "-ldl" )
 
-## Create So Library
-##add_library(Test SHARED ./src/main.cpp)
-add_executable(Money ./src/main.cpp ./src/account.cpp ./src/transaction.cpp)
+## Create Executable and shared library
+add_executable(Money ./src/main.cpp ./src/account.cpp ./src/transaction.cpp) ## Make this part of tests
 add_library(MoneyLib SHARED ./src/account.cpp ./src/transaction.cpp)
