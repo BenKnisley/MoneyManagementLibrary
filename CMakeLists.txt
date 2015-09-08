@@ -16,11 +16,11 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../static ) ## Output St
 set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../shared ) ## Output Shared Libs
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin ) ## Output Executable
 
-## Build final shared library
-add_library( MoneyLib SHARED ${SOURCES} )
-
 ## Build tests
 foreach( file ${TESTS} ) ##  For each file in TESTS
     get_filename_component(fileName ${file} NAME_WE) ## Extract filename
     add_executable( ${fileName} ${file} ${SOURCES} ) ## Build Test
 endforeach()
+
+## Build final shared library
+add_library( MoneyLib SHARED ${SOURCES} )
