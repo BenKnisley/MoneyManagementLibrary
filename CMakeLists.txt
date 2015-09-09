@@ -12,9 +12,9 @@ file(GLOB TESTS test/*.cpp) ## Put all cpp files in test into var
 include_directories( ${CMAKE_BINARY_DIR}/../include ) ## Set project include directory
 
 ## Set output directorys
-set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../static ) ## Output Static Libs
-set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../shared ) ## Output Shared Libs
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin ) ## Output Executable
+set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../static ) ## Static Libs Output Directory
+set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../shared ) ## Shared Libs Output Directory
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin ) ## Executable Output Directory
 
 ## Build tests
 foreach( file ${TESTS} ) ##  For each file in TESTS
