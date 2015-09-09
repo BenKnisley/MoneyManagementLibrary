@@ -1,10 +1,12 @@
-Start Here
+C++ Money Management Library
 ===
 ### What This Library Does
 
-This library is made to track the monetary balance in a set of accounts. It does this with two types of objects. An account object, and a transaction object. The account object holds information about an account such as account
-number, and balance. The transaction objects holds details about a transaction
-between accounts, such as debit and credit account, and sum being moved.
+This library is made to track the monetary balance in a set of accounts. It does
+this with two types of objects. An account object, and a transaction object. The
+account object holds information about an account such as account number, and
+balance. The transaction objects holds details about a transaction between
+accounts, such as debit and credit account, and sum being moved.
 
 
 ### How To Use
@@ -14,7 +16,8 @@ This library is very simple to use. To start include it into your project.
 #include "money.h"
 ```
 
-Create a few accounts. Pointers are used to address both accounts and transactions.
+Create a few accounts. Pointers are used to address both accounts and
+transactions.
 ```c++
 ## Create account to represent income
 account* income = new account("000000000000000");
@@ -41,7 +44,8 @@ transaction* trans2 = new transaction(saving, checking, 8650);
 transaction* trans3 = new transaction(checking, spending, 7551);
 ```
 
-Apply each transaction to each accounts, if it does not pertain to that account it is ignored. This will be expensive with a large amount of transactions.
+Apply each transaction to each accounts, if it does not pertain to that account
+it is ignored. This will be expensive with a large amount of transactions.
 ```c++
 income->applyTranaction( trans1 );
 income->applyTranaction( trans2 );
@@ -60,7 +64,8 @@ saving->applyTranaction( trans2 );
 saving->applyTranaction( trans3 );
 ```
 
-Get data out of accounts. The function convertCentsToDollars is used to convert the int cent value stored in the account object into a double dollar value.
+Get data out of accounts. The function convertCentsToDollars is used to convert
+the int cent value stored in the account object into a double dollar value.
 ```c++
 double savingBalance = convertCentsToDollars( income->getBalance() );
 ```
