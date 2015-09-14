@@ -10,7 +10,6 @@ To Do List
 - Add target to build with clang
 
 #### Testing
-- Add testfile for account constructor
 - Add testfile for transaction constructor
 - Add testfile for the centsToDollars function
 - Add testfile for transaction::getBalance
