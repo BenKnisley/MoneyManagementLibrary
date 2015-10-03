@@ -16,7 +16,7 @@ set( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../static ) ## Static Li
 set( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../shared ) ## Shared Libs Output Directory
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../bin ) ## Executable Output Directory
 
-## Build tests
+## Build tests [All cpp files in test dir]
 foreach( file ${TESTS} ) ##  For each file in TESTS
     get_filename_component(fileName ${file} NAME_WE) ## Extract filename
     add_executable( ${fileName} ${file} ${SOURCES} ) ## Build Test

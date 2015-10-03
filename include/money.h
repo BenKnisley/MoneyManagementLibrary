@@ -7,4 +7,6 @@ using namespace std;
 
 double convertCentsToDollars( int cents );
 
+int convertDollarsToCents( double dollars );
+
 #endif
